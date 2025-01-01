@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AppConfig } from "./config"; // 引入配置文件
+import { AppConfig } from "./config";
 import "./globals.css";
 
 /**
@@ -17,13 +17,15 @@ export const metadata: Metadata = {
  * 此组件作为整个应用程序的根布局。
  * 它设置 HTML 结构，应用字体变量，并渲染子组件。
  *
- * @param {Object} props - 传递给组件的属性
  * @param {React.ReactNode} props.children - 在布局中要渲染的子组件
  * @returns {JSX.Element} 根布局结构
  */
 export default function RootLayout({children,}: { children: React.ReactNode}) {
   return (
     <html lang="zh-cn">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       {/* antialiased 启用字体的抗锯齿效果 */}
       <body className="antialiased" >
         {children}
