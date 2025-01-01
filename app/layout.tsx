@@ -17,6 +17,7 @@ export const metadata: Metadata = {
  * 此组件作为整个应用程序的根布局。
  * 它设置 HTML 结构，应用字体变量，并渲染子组件。
  *
+ * @param {Object} props - 组件属性
  * @param {React.ReactNode} props.children - 在布局中要渲染的子组件
  * @returns {JSX.Element} 根布局结构
  */
