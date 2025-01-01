@@ -8,11 +8,11 @@ export function middleware(req: NextRequest) {
   if (token) {
     return NextResponse.next();
   }else{
-    return NextResponse.redirect(new URL("/login", req.url));
+    return NextResponse.redirect(new URL("/auth/login", req.url));
   }
 }
 
 // 仅对需要保护的路由生效
 export const config = {
-  matcher: ["/","/dashboard/:path*"], // 需要保护的路由
+  matcher: ["/","/main/:path*"], // 需要保护的路由
 };
