@@ -13,6 +13,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { AppConfig } from "@/app/config";
 
 /**
  * MainLayout组件
